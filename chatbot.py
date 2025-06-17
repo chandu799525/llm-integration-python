@@ -3,10 +3,10 @@ import requests
 import json
 
 # Your OpenRouter API key
-API_KEY = "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"
+API_KEY = "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"
 
-st.title("👽 Chat with Meta")
-st.write("Using the `Meta: Llama 3.3 8B Instruct (free)`  via OpenRouter API")
+st.title("👽 Chat with Deepseek")
+st.write("Using the `deepseek/deepseek-chat-v3-0324:free`  via OpenRouter API")
 
 # Input from user
 user_input = st.text_input("Ask something:")
@@ -21,7 +21,7 @@ if st.button("Send") and user_input:
 }
 
     payload = {
-        "model": "deepseek/deepseek-r1:free",
+        "model": "deepseek/deepseek-chat-v3-0324:free",
         "messages": [
             {"role": "user", "content": user_input}
         ]
